@@ -1,0 +1,48 @@
+GitHub. HW_2
+1. На локальном репозитории сделать ветки для:
+- Postman - git branch Postman
+- Jmeter - git branch Jmeter
+- CheckLists - git branch CheckLists
+- Bug Reports - git branch Bug_Reports
+- SQL - git branch SQL
+- Charles - git branch Charles
+- Mobile testing -  git branch Mobile_testing
+
+2. Запушить все ветки на внешний репозиторий - git push -u origin --all
+3. В ветке Bag Reports сделать текстовый документ со структурой баг репорта - 
+git checkout Bug_Reports
+vim report.txt
+  1) name:"the Send button is not clickable"
+  2) priority:high
+  3) environment:Android 10, Chrome 100.2
+  4) step1:open messenger
+  5) step2:open a conversation with user c helen12
+  6) step3:write any message
+  7) step4:click the send button
+  8) expected result:"the message has been sent"
+  9) actual result:"the Send button is not clickable"
+Esc
+:wq
+4. Запушить структуру багрепорта на внешний репозиторий - git add "report.txt"
+git commit -m "inf"
+git push
+5. Вмержить ветку Bag Reports в Main -  git checkout main
+git merge Bug_Reports
+6. Запушить main на внешний репозиторий. - git push
+7. В ветке CheckLists набросать структуру чек листа. - git checkout CheckLists
+vim check_list.txt
+1)Проверить добавление товара в корзину
+2)Проверить удаление товара из корзины
+3)Проверить возможность выбора одного товара для заказа при наличии нескольких товаров в корзине
+4)Проверить возможность выбора всех товаров в корзине отметкой чек-бокса "Выбрать всё"
+5)Проверить что итоговая сумма заказа меняется при добавлении/удалении товара
+6)Проверить что по нажатию на товар, открывается страница с товаром
+7)Проверить отображение верного количества товара на пине корзины в сравнении с количеством товара в самой корзине
+Esc
+:wq
+8. Запушить структуру на внешний репозиторий - git add "check_list.txt"
+git commit -m "check" 
+git push
+9. На внешнем репозитории сделать Pull Request ветки CheckLists в main 
+10. Синхронизировать Внешнюю и Локальную ветки Main - git checkout main
+git pull
